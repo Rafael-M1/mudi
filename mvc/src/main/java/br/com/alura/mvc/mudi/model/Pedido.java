@@ -1,6 +1,5 @@
 package br.com.alura.mvc.mudi.model;
 
-import java.io.Serializable;
 import java.time.LocalDate;
 
 import javax.persistence.Column;
@@ -13,9 +12,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tb_pedidos")
-public class Pedido implements Serializable {
-	private static final long serialVersionUID = 1L;
+@Table(name = "tb_pedido")
+public class Pedido {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,6 +25,7 @@ public class Pedido implements Serializable {
 	private String urlProduto;
 	private String urlImagem;
 	private String descricao;
+	
 	@Enumerated(EnumType.STRING)
 	private StatusPedido status;
 	
